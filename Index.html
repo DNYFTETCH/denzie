@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1a1a2e">
+    <meta name="description" content="Denzie - The God AI with Ultimate Power Cores">
+    
+    <title>denzie AI</title>
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Icons -->
+    <link rel="icon" type="image/png" href="assets/icons/favicon.ico">
+    <link rel="apple-touch-icon" href="assets/icons/icon-192.png">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="logo">⚡ DENZIE</h1>
+                <button id="cores-btn" class="cores-button">
+                    <span class="cores-icon">🔮</span>
+                    Power Cores
+                </button>
+            </div>
+        </header>
+
+        <!-- Power Cores Panel (Sidebar) -->
+        <aside id="cores-panel" class="cores-panel hidden">
+            <div class="cores-header">
+                <h2>⚡ Power Cores</h2>
+                <button id="close-cores">✕</button>
+            </div>
+            <div class="cores-list" id="cores-list">
+                <!-- Cores will be dynamically loaded -->
+            </div>
+        </aside>
+
+        <!-- Chat Container -->
+        <main class="chat-container">
+            <div id="messages" class="messages">
+                <div class="system-message">
+                    <div class="avatar system-avatar">⚡</div>
+                    <div class="message-content">
+                        <strong>DENZIE AI INITIALIZED</strong>
+                        <p>God-tier intelligence online. All power cores ready.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Input Area -->
+        <footer class="input-area">
+            <div class="input-container">
+                <button id="attach-btn" class="icon-btn">📎</button>
+                <textarea 
+                    id="user-input" 
+                    placeholder="Command Denzie..."
+                    rows="1"
+                ></textarea>
+                <button id="send-btn" class="send-btn">
+                    <span class="send-icon">⚡</span>
+                </button>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Install Prompt (for PWA) -->
+    <div id="install-prompt" class="install-prompt hidden">
+        <p>Install Denzie AI for the ultimate experience</p>
+        <button id="install-btn">Install Now</button>
+        <button id="dismiss-install">Maybe Later</button>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/ui.js"></script>
+    <script src="js/cores.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
